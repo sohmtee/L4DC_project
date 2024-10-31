@@ -110,6 +110,7 @@ def compute_feature_vector(trajectory, class_index, feature_dim=1):
     start_idx = class_index * feature_dim
     end_idx = start_idx + feature_dim
     feature_vector[start_idx:end_idx] = original_feature
+    feature_vector = feature_vector / 6
     return feature_vector
 
 def softmax(x):
